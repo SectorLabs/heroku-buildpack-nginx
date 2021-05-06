@@ -45,6 +45,7 @@ echo "Downloading $uuid4_url"
   cd nginx-${NGINX_VERSION}
   ./configure \
     --with-pcre=pcre-${PCRE_VERSION} \
+    --with-pcre-opt="-DSUPPORT_UTF" \
     --with-zlib=zlib-${ZLIB_VERSION} \
     --with-http_gzip_static_module \
     --with-http_realip_module \
@@ -60,6 +61,7 @@ echo "Downloading $uuid4_url"
   ./configure \
     --with-debug \
     --with-pcre=pcre-${PCRE_VERSION} \
+    --with-pcre-opt="-DSUPPORT_UTF" \
     --with-zlib=zlib-${ZLIB_VERSION} \
     --with-http_gzip_static_module \
     --with-http_realip_module \
